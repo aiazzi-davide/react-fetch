@@ -31,11 +31,10 @@ function App() {
 
   return (
     <div className="App">
-      <button onClick={loadAlunni}>carica alunni</button>
     {
       isLoading ? <p>Caricamento in corso...</p>:
       alunni.map((alunno) => (
-        <Bottone alunno = {alunno} key={alunno.id}/>
+        <Bottone alunno = {alunno} key={alunno.id} loadAlunni={loadAlunni}/>
       ))
     }
     </div>
