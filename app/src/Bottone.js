@@ -1,12 +1,12 @@
 import {useState} from 'react';
 
 function Bottone(props){
-    const [contatore, setContatore] = useState(0);
+    let alunno = props.alunno;
+    const [contatore, setContatore] = useState(alunno.id);
 
     function incrementa(){
         setContatore(contatore +1);
     }
-    let alunno = props.alunno;
 
     return (
         <div>
