@@ -10,6 +10,7 @@ import Bottone from './Bottone';
 function App() {
   const [alunni, setAlunni] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [showform, setShowform] = useState(false);
 
   useEffect(() => {
     loadAlunni();
@@ -36,6 +37,10 @@ function App() {
       alunni.map((alunno) => (
         <Bottone alunno = {alunno} key={alunno.id} loadAlunni={loadAlunni}/>
       ))
+    }
+    <button onClick = {() => setShowform(true)}>Inserisci nuovo alunno</button>
+    {
+      showform && <div>form</div>
     }
     </div>
   );
